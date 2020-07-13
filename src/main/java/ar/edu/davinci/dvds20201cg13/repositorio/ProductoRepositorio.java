@@ -7,12 +7,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import ar.edu.davinci.dvds20201cg13.modelo.Cliente;
+import ar.edu.davinci.dvds20201cg13.modelo.Producto;
 
-@Repository("clienteRepositorio")
-public interface ClienteRepositorio extends JpaRepository<Cliente, Long>{
 
-	public List<Cliente> searchByLastName(@Param("apellido") String lastName) throws DataAccessException;
+@Repository("productosRepositorio")
+public interface ProductoRepositorio extends JpaRepository<Producto, Long>{
+
+	public List<Producto> searchByName(@Param("nombre") String name) throws DataAccessException;
 
 }
-
